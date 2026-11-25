@@ -338,7 +338,7 @@ body.hovering-link .cursor-ring {
     -webkit-text-fill-color: transparent;
 }
 
-/* Navigation Alignment (Order: Home, Contents, Automotive, Motion Graphics, Presentation, Real Estate, About, Contact; Gap: 36px) */
+/* Navigation Alignment (Order: Home, Contents, About, Contact; Gap: 36px) */
 .nav-links {
     display: flex;
     align-items: center;
@@ -2514,9 +2514,12 @@ body.hovering-link .cursor-ring {
 }
 
 /* ==========================================================================
-   MORFIN FX STYLE LUXURY REAL ESTATE SECTION
+   MORFIN FX STYLE LUXURY REAL ESTATE, TRAVEL, REELS & BEFORE/AFTER SECTIONS
    ========================================================================== */
-.real-estate-section {
+.real-estate-section,
+.travel-section,
+.reels-section,
+.before-after-section {
     position: relative;
     padding: var(--section-padding-y) 0;
     background-color: #050505;
@@ -2525,7 +2528,10 @@ body.hovering-link .cursor-ring {
 }
 
 /* Premium Matte Black + Dark Crimson Glass Container */
-.real-estate-showcase-container {
+.real-estate-showcase-container,
+.travel-showcase-container,
+.reels-showcase-container,
+.before-after-showcase-container {
     width: 100%;
     max-width: 1320px;
     margin: 2.5rem auto 0;
@@ -2540,8 +2546,19 @@ body.hovering-link .cursor-ring {
     z-index: 2;
 }
 
+/* Side-by-side 9:16 Grid for Reels & Shorts */
+.reels-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 380px));
+    justify-content: center;
+    gap: 2rem;
+}
+
 /* Premium Player Wrapper (Red Glow Border, Glass Reflection, Inner Shadow, Vignette) */
-.real-estate-player-wrapper {
+.real-estate-player-wrapper,
+.travel-player-wrapper,
+.reels-player-wrapper,
+.before-after-player-wrapper {
     position: relative;
     width: 100%;
     max-width: 980px;
@@ -2555,7 +2572,10 @@ body.hovering-link .cursor-ring {
 }
 
 /* Glass Reflection at Top Edge */
-.real-estate-player-wrapper::before {
+.real-estate-player-wrapper::before,
+.travel-player-wrapper::before,
+.reels-player-wrapper::before,
+.before-after-player-wrapper::before {
     content: '';
     position: absolute;
     top: 0;
@@ -2570,7 +2590,10 @@ body.hovering-link .cursor-ring {
 }
 
 /* Dark Vignette Inner Shadow Overlay */
-.real-estate-player-wrapper::after {
+.real-estate-player-wrapper::after,
+.travel-player-wrapper::after,
+.reels-player-wrapper::after,
+.before-after-player-wrapper::after {
     content: '';
     position: absolute;
     inset: 0;
@@ -2580,8 +2603,11 @@ body.hovering-link .cursor-ring {
     border-radius: 26px;
 }
 
-/* Real Estate Video Player Size Specification (980px Max Width, 16:9 Aspect Ratio) */
-.real-estate-video-player {
+/* Real Estate, Travel, Reels & Before/After Video Player Size Specification */
+.real-estate-video-player,
+.travel-video-player,
+.reels-video-player,
+.before-after-video-player {
     width: 100%;
     max-width: 980px;
     aspect-ratio: 16 / 9;
@@ -2595,7 +2621,25 @@ body.hovering-link .cursor-ring {
     z-index: 1;
 }
 
-.real-estate-video-player video {
+/* Preserve native 9:16 portrait aspect ratio for Reels & Shorts */
+.reels-video-player {
+    aspect-ratio: 9 / 16;
+    max-height: none;
+}
+
+/* Preserve native 1696x846 aspect ratio for Before & After primary video, 16:9 for Sony ZV-E1 */
+.before-after-video-player {
+    aspect-ratio: 1696 / 846;
+}
+
+.before-after-video-player.before-after-video-16x9 {
+    aspect-ratio: 16 / 9;
+}
+
+.real-estate-video-player video,
+.travel-video-player video,
+.reels-video-player video,
+.before-after-video-player video {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -2604,6 +2648,42 @@ body.hovering-link .cursor-ring {
     display: block;
     background-color: #000000;
     outline: none;
+}
+
+.before-after-desc {
+    max-width: 760px;
+    margin: 2rem auto 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.before-after-item-secondary {
+    margin-top: 4rem;
+}
+
+.before-after-label-wrap {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.before-after-label {
+    display: inline-block;
+    padding: 0.45rem 1.15rem;
+    font-family: var(--font-heading-sans);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent-red);
+    background: rgba(255, 40, 40, 0.08);
+    border: 1px solid rgba(255, 40, 40, 0.25);
+    border-radius: 999px;
+}
+
+.before-after-item-secondary .before-after-showcase-container {
+    margin-top: 0;
 }
 
 

@@ -58,8 +58,8 @@ function initVideoModal() {
     if (!modal) return;
 
     document.querySelectorAll('.video-card-placeholder, [data-video-url]').forEach((card) => {
-        // Explicitly exclude Automotive, Motion Graphics, Presentation, and Real Estate sections from opening modals
-        if (card.closest('#automotive') || card.closest('#motion-graphics') || card.closest('#presentation-videos') || card.closest('#real-estate')) return;
+        // Explicitly exclude Automotive, Motion Graphics, Presentation, Real Estate, Travel, Reels & Shorts, and Before & After sections from opening modals
+        if (card.closest('#automotive') || card.closest('#motion-graphics') || card.closest('#presentation-videos') || card.closest('#real-estate') || card.closest('#travel') || card.closest('#reels-shorts') || card.closest('#before-after')) return;
 
         card.addEventListener('click', (e) => {
             // Prevent event bubbling if clicking nested buttons

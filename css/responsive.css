@@ -72,7 +72,10 @@
     .automotive-player,
     .motion-showcase-container,
     .presentation-showcase-container,
-    .real-estate-showcase-container {
+    .real-estate-showcase-container,
+    .travel-showcase-container,
+    .reels-showcase-container,
+    .before-after-showcase-container {
         padding: 16px;
         border-radius: 24px;
     }
@@ -83,7 +86,13 @@
     .presentation-video-player,
     .presentation-video-player video,
     .real-estate-video-player,
-    .real-estate-video-player video {
+    .real-estate-video-player video,
+    .travel-video-player,
+    .travel-video-player video,
+    .reels-video-player,
+    .reels-video-player video,
+    .before-after-video-player,
+    .before-after-video-player video {
         border-radius: 18px;
     }
 
@@ -342,9 +351,17 @@
     .automotive-player,
     .motion-showcase-container,
     .presentation-showcase-container,
-    .real-estate-showcase-container {
+    .real-estate-showcase-container,
+    .travel-showcase-container,
+    .reels-showcase-container,
+    .before-after-showcase-container {
         padding: 12px;
         border-radius: 20px;
+    }
+
+    .reels-grid {
+        grid-template-columns: minmax(0, 380px);
+        gap: 1.5rem;
     }
 
     .automotive-player video,
@@ -353,7 +370,13 @@
     .presentation-video-player,
     .presentation-video-player video,
     .real-estate-video-player,
-    .real-estate-video-player video {
+    .real-estate-video-player video,
+    .travel-video-player,
+    .travel-video-player video,
+    .reels-video-player,
+    .reels-video-player video,
+    .before-after-video-player,
+    .before-after-video-player video {
         border-radius: 14px;
     }
 }
